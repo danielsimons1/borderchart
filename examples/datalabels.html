@@ -1,0 +1,93 @@
+<html>
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script src="../jquery.borderChart.js"></script>
+	<script type="text/javascript">
+	$(function () {
+	    $('.borderChart').borderchart({
+	        strokeWidth: 15,
+	        dataset: [{
+            data: 10,
+            color: '#2c3969',
+            label: 'Dark Blue'
+        }, {
+            data: 10,
+            color: '#415989',
+            label: 'Blue'
+        }, {
+            data: 10,
+            color: '#a4bfd2',
+            label: 'Light Blue'
+        }, {
+            data: 10,
+            color: '#a4c892',
+            label: 'Olive'
+        }, {
+            data: 10,
+            color: '#bce0ae',
+            label: 'Light Green'
+        }, {
+            data: 10,
+            color: '#ffac29',
+            label: 'Orange'
+        }, {
+            data: 10,
+            color: '#edf0f2',
+            label: 'White'
+        }, {
+            data: 10,
+            color: '#f2e8da',
+            label: 'Tan'
+        }, {
+            data: 10,
+            color: '#c6beb4',
+            label: 'Gray'
+        }, {
+            data: 10,
+            color: '#e74e34',
+            label: 'Red'
+        }]
+	    });
+	});
+	
+	</script>
+<style>
+.color-line-wrapper {position:absolute;}
+.color-line {display:inline-block;position:absolute; }
+.color-border-wrapper {position:relative;}
+.color-border-wrapper img {position:relative;}
+
+
+/** EXTRA hover Styles **/
+.color-line-wrapper { transition:opacity .3s ease-in;-moz-transition:opacity .3s ease-in;-webkit-transition:opacity .3s ease-in; }
+.color-border-wrapper.hover .color-line-wrapper {
+	opacity:.5;
+	filter: alpha(opacity=50);
+}
+.color-border-wrapper.hover .color-line-wrapper.hover {
+	opacity:1;
+	filter: alpha(opacity=1);
+}
+
+/** Styles for Labels **/
+.color-border-wrapper .label-wrapper {
+	box-shadow: 0px 1px 8px rgb(129, 129, 129);
+	-moz-box-shadow: 0px 1px 8px rgb(129, 129, 129);
+	-webkit-box-shadow: 0px 1px 8px rgb(129, 129, 129);
+	padding: 2px 8px;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	margin: 6px;
+	background: white;
+	z-index: 3;
+	white-space: nowrap;
+	border: 2px solid rgb(164, 200, 146);
+	display:none;
+}
+
+
+</style>
+<body>
+	<img style="height:150px;width:220px" class="borderChart" src="profile.jpg">
+</body>

@@ -1,0 +1,31 @@
+{
+  "name": "borderchart",
+  "version": "1.0.0",
+  "title": "Border-based Chart Builder",
+  "description": "jQuery Charting Plugin. You supply the data and borderchart builds a chart in the form of a colored border around your html element.",
+  "keywords": [
+    "jquery",
+    "plugin",
+    "charting",
+    "css3",
+    "border",
+    "color",
+    "charts"
+  ],
+  "homepage": "https://github.com/danielsimons1/borderchart",
+  "author": {
+    "name": "Daniel Simons"
+  },
+  "bugs": "https://github.com/danielsimons1/borderchart/issues",
+  "licenses": [
+    {
+      "type": "GPL",
+      "url": "https://github.com/danielsimons1/borderchart/blob/master/LICENSE-GPL"
+    }
+  ],
+  "dependencies": {
+    "jquery": ">=1.5"
+  },
+  "docs": "https://github.com/danielsimons1/borderchart/blob/master/README.md",
+  "demo": "https://github.com/danielsimons1/borderchart"
+}
