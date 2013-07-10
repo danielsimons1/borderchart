@@ -1,0 +1,39 @@
+.color-line-wrapper {position:absolute;}
+.color-line {display:inline-block;position:absolute; }
+.color-border-wrapper {position:relative;}
+.color-border-wrapper img {position:relative;}
+
+/** Extra Rounded Corners Styles **/
+.color-line.top-left {border-top-left-radius: 10px;-webkit-border-top-left-radius: 10px; -moz-border-top-left-radius: 10px;}
+.color-line.top-right {border-top-right-radius: 10px; -webkit-border-top-right-radius: 10px; -moz-border-top-right-radius: 10px;}
+.color-line.bottom-left {border-bottom-left-radius: 10px; -webkit-border-bottom-left-radius: 10px; -moz-border-bottom-left-radius: 10px;}
+.color-line.bottom-right {border-bottom-right-radius: 10px; -webkit-border-bottom-right-radius: 10px; -moz-border-bottom-right-radius: 10px;}
+
+
+/** EXTRA hover Styles **/
+.color-line-wrapper { transition:opacity .3s ease-in;-moz-transition:opacity .3s ease-in;-webkit-transition:opacity .3s ease-in; }
+.color-border-wrapper.hover .color-line-wrapper {
+	opacity:.5;
+	filter: alpha(opacity=50);
+}
+.color-border-wrapper.hover .color-line-wrapper.hover {
+	opacity:1;
+	filter: alpha(opacity=1);
+}
+
+/** Styles for Labels **/
+.color-border-wrapper .label-wrapper {
+	box-shadow: 0px 1px 8px rgb(129, 129, 129);
+	-moz-box-shadow: 0px 1px 8px rgb(129, 129, 129);
+	-webkit-box-shadow: 0px 1px 8px rgb(129, 129, 129);
+	padding: 2px 8px;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	margin: 6px;
+	background: white;
+	z-index: 3;
+	white-space: nowrap;
+	border: 2px solid rgb(164, 200, 146);
+	display:none;
+}

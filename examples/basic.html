@@ -1,0 +1,53 @@
+<html>
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script src="../javascripts/jquery.borderChart.js"></script>
+	<script type="text/javascript">
+	$(function () {
+	    $('.borderChart').borderchart({
+	        strokeWidth: 15,
+	        dataset: [{
+	            data: 10,
+	            color: '#2c3969'
+	        }, {
+	            data: 10,
+	            color: '#415989'
+	        }, {
+	            data: 10,
+	            color: '#a4bfd2'
+	        }, {
+	            data: 10,
+	            color: '#a4c892'
+	        }, {
+	            data: 10,
+	            color: '#bce0ae'
+	        }, {
+	            data: 10,
+	            color: '#ffac29'
+	        }, {
+	            data: 10,
+	            color: '#edf0f2'
+	        }, {
+	            data: 10,
+	            color: '#f2e8da'
+	        }, {
+	            data: 10,
+	            color: '#c6beb4'
+	        }, {
+	            data: 10,
+	            color: '#e74e34'
+	        }]
+	    });
+	});
+	
+	</script>
+<style>
+.color-line-wrapper {position:absolute;}
+.color-line {display:inline-block;position:absolute; }
+.color-border-wrapper {position:relative;}
+.color-border-wrapper img {position:relative;}
+
+</style>
+<body>
+	<img style="height:150px;width:220px" class="borderChart" src="profile.jpg">
+</body>
