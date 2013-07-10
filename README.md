@@ -88,8 +88,4 @@ $('.borderChart').borderchart({
 .color-border-wrapper {position:relative;}
 .color-border-wrapper img {position:relative;}
 
-.threedpages > .page:hover {
-	box-shadow: 2px 2px 18px gray, -2px -2px 18px black;
-	-webkit-transform: scale(0.4);
-}
 ```
