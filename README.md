@@ -9,7 +9,7 @@ License: Free General Public License (GPL)<br />
 <h2>Brief</h2>
 jQuery Charting Plugin.  You supply the data and borderchart builds a chart in the form of a colored border around your html element. 
 
-Very easy to implement please follow the instructions below:
+Checkout the <a href="http://daniel.simons1.github.io/borderchart">demo</a>.  Very easy to implement please follow the instructions below:
 
 <h3>HTML</h3>
 
