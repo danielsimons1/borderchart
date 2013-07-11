@@ -12,7 +12,7 @@
             var $this = $(this),
                 width = $this.width() + opts.strokewidth,
                 height = $this.height() + opts.strokewidth,
-                $parent = $('<div class="color-border-wrapper"></div>').insertAfter($this).css({'margin-bottom':opts.strokewidth}),
+                $parent = $('<div class="color-border-wrapper"></div>').insertAfter($this),
                 area = (width * 2) + (height * 2),
                 lineStart = 0,
                 dataSize = 0;
@@ -94,11 +94,8 @@
             });
 
             $this.remove().css({
-                top: (parseInt($this.css('top')) || 0) + opts.strokewidth,
-                left: (parseInt($this.css('left')) || 0) + opts.strokewidth,
-                marginRight: (parseInt($this.css('left')) || 0) + opts.strokewidth,
-                marginBottom: (parseInt($this.css('top')) || 0) + opts.strokewidth,
-                position: 'relative'
+                top: $this.css('top') + opts.strokewidth,
+                left: $this.css('left') + opts.strokewidth
             }).appendTo($parent.width(width).height(height).hover(borderchart.hoverChartIn, borderchart.hoverChartOut));
 
             
@@ -166,6 +163,8 @@
     $.fn.borderchart.hoverBorderOut = function (border, parent, opts) {
         var $border = $(border).removeClass('hover'),
             $parent = $(parent).removeClass('hover');
+
+        console.log($border);
 
         if(this.hasLabels(opts)) {
             this.toggleLabel($parent, $border, $border.data('data'), false);
