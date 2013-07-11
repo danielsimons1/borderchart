@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/borderchart.css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script src="javascripts/jquery.borderchart.js"></script>
     <!--[if lt IE 9]>
@@ -39,33 +40,124 @@
 <p>Invoke A Default border chart on an image element:</p>
 
 <h4>HTML:</h4>
-<pre><code>&lt;img class="borderchart" src="profile.jpg" style="height:150px;width:220px"&gt;
+<pre><code>&lt;img class="borderchart" src="examples/profile.jpg" style="height:150px;width:220px"&gt;
 </code></pre>
 <h4>Javascript:</h4>
 <pre><code>$(function() {
     $('.borderchart').borderchart();
  });</code></pre>
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
+<p><img class="borderchart" src="examples/profile.jpg" style="height:150px;width:220px"></p>
+<script type="text/javascript">
+$(function() {
+    $('.borderchart').borderchart();
+ });
+</script>
+<p style="clear:both;margin-top:100px"></p>
 <h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Data Labels</h3>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<div style="margin-bottom:20px"><div class="labeledborderchart"><div style="padding:10px">
+  <p>This border chart has labels that appear when you hover over them.  The labels can be passed into borderchart via the dataset option</p>
+  <p>Note: The content within the border chart can be any html that you'd like</p>
+  
+</div></div>
+<p style="clear:both;margin-top:100px"></p>
+<p>Instantiation of this chart is as follows:</p>
+  <pre><code>$('.labeledborderchart').borderchart({
+  dataset: [{
+            data: 10,
+            color: '#2c3969',
+            label: 'Dark Blue'
+        }, {
+            data: 10,
+            color: '#415989',
+            label: 'Blue'
+        }, {
+            data: 10,
+            color: '#a4bfd2',
+            label: 'Light Blue'
+        }, {
+            data: 10,
+            color: '#a4c892',
+            label: 'Olive'
+        }, {
+            data: 10,
+            color: '#bce0ae',
+            label: 'Light Green'
+        }, {
+            data: 10,
+            color: '#ffac29',
+            label: 'Orange'
+        }, {
+            data: 10,
+            color: '#edf0f2',
+            label: 'White'
+        }, {
+            data: 10,
+            color: '#f2e8da',
+            label: 'Tan'
+        }, {
+            data: 10,
+            color: '#c6beb4',
+            label: 'Gray'
+        }, {
+            data: 10,
+            color: '#e74e34',
+            label: 'Red'
+        }],
+        strokewidth:25
+    });</code></pre>
+</div>
+<script type="text/javascript">
+$(function() {
+    $('.labeledborderchart').borderchart({
+          strokewidth: 55,
+          dataset: [{
+            data: 10,
+            color: '#2c3969',
+            label: 'Dark Blue'
+        }, {
+            data: 10,
+            color: '#415989',
+            label: 'Blue'
+        }, {
+            data: 10,
+            color: '#a4bfd2',
+            label: 'Light Blue'
+        }, {
+            data: 10,
+            color: '#a4c892',
+            label: 'Olive'
+        }, {
+            data: 10,
+            color: '#bce0ae',
+            label: 'Light Green'
+        }, {
+            data: 10,
+            color: '#ffac29',
+            label: 'Orange'
+        }, {
+            data: 10,
+            color: '#edf0f2',
+            label: 'White'
+        }, {
+            data: 10,
+            color: '#f2e8da',
+            label: 'Tan'
+        }, {
+            data: 10,
+            color: '#c6beb4',
+            label: 'Gray'
+        }, {
+            data: 10,
+            color: '#e74e34',
+            label: 'Red'
+        }]
+      });
+ });
+</script>
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
         </section>
 
         <footer>
